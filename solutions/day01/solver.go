@@ -8,10 +8,10 @@ func New(input string) *Solver {
 	return &Solver{input: input}
 }
 
-func (d *Solver) SolveA() string {
+func (s *Solver) SolveA() string {
 	return ""
 }
 
-func (d *Solver) SolveB() string {
+func (s *Solver) SolveB() string {
 	return ""
 }
