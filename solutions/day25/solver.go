@@ -1,17 +1,15 @@
 package day25
 
-type Solver struct {
-	input string
+type Solver struct{}
+
+func New() *Solver {
+	return &Solver{}
 }
 
-func New(input string) *Solver {
-	return &Solver{input: input}
-}
-
-func (s *Solver) SolveA() string {
+func (s *Solver) SolveA(input string) string {
 	return ""
 }
 
-func (s *Solver) SolveB() string {
+func (s *Solver) SolveB(input string) string {
 	return ""
 }

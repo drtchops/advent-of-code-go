@@ -33,67 +33,78 @@ import (
 )
 
 type Solver interface {
-	SolveA() string
-	SolveB() string
+	SolveA(input string) string
+	SolveB(input string) string
 }
 
-func GetSolver(day int64) Solver {
+func Solve(day int64, part string) (string, error) {
 	input := getInput(day)
+
+	var solver Solver
 
 	switch day {
 	case 1:
-		return day01.New(input)
+		solver = day01.New()
 	case 2:
-		return day02.New(input)
+		solver = day02.New()
 	case 3:
-		return day03.New(input)
+		solver = day03.New()
 	case 4:
-		return day04.New(input)
+		solver = day04.New()
 	case 5:
-		return day05.New(input)
+		solver = day05.New()
 	case 6:
-		return day06.New(input)
+		solver = day06.New()
 	case 7:
-		return day07.New(input)
+		solver = day07.New()
 	case 8:
-		return day08.New(input)
+		solver = day08.New()
 	case 9:
-		return day09.New(input)
+		solver = day09.New()
 	case 10:
-		return day10.New(input)
+		solver = day10.New()
 	case 11:
-		return day11.New(input)
+		solver = day11.New()
 	case 12:
-		return day12.New(input)
+		solver = day12.New()
 	case 13:
-		return day13.New(input)
+		solver = day13.New()
 	case 14:
-		return day14.New(input)
+		solver = day14.New()
 	case 15:
-		return day15.New(input)
+		solver = day15.New()
 	case 16:
-		return day16.New(input)
+		solver = day16.New()
 	case 17:
-		return day17.New(input)
+		solver = day17.New()
 	case 18:
-		return day18.New(input)
+		solver = day18.New()
 	case 19:
-		return day19.New(input)
+		solver = day19.New()
 	case 20:
-		return day20.New(input)
+		solver = day20.New()
 	case 21:
-		return day21.New(input)
+		solver = day21.New()
 	case 22:
-		return day22.New(input)
+		solver = day22.New()
 	case 23:
-		return day23.New(input)
+		solver = day23.New()
 	case 24:
-		return day24.New(input)
+		solver = day24.New()
 	case 25:
-		return day25.New(input)
+		solver = day25.New()
+	default:
+		return "", fmt.Errorf("cannot find solver for day %d", day)
 	}
 
-	return nil
+	switch part {
+	case "a":
+		return solver.SolveA(input), nil
+	case "b":
+		return solver.SolveB(input), nil
+	default:
+		return "", fmt.Errorf("cannot find solver for day %d part %s", day, part)
+	}
 }
 
 func getInput(day int64) string {

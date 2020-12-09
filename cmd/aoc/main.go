@@ -31,22 +31,14 @@ func main() {
 		return
 	}
 
-	solver := solutions.GetSolver(day)
-	if solver == nil {
-		panic(fmt.Sprintf("missing solver for day %d", day))
-	}
-
 	fmt.Printf("Solving day %d part %s\n", day, part)
 
 	t := time.Now()
-
-	var answer string
-	if part == "a" {
-		answer = solver.SolveA()
-	} else {
-		answer = solver.SolveB()
+	answer, err := solutions.Solve(day, part)
+	if err != nil {
+		panic(err)
 	}
 
-	fmt.Printf("Answer: %s\n", answer)
 	fmt.Printf("Took %.2f seconds\n", time.Since(t).Seconds())
+	fmt.Printf("Answer: %s\n", answer)
 }
