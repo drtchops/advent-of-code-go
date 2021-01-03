@@ -5,6 +5,14 @@ import (
 	"strings"
 )
 
+type Point struct {
+	X, Y int64
+}
+
+type Point3D struct {
+	X, Y, Z int64
+}
+
 // ParseInputInts takes a string input and parses it to a list of numbers.
 func ParseInputInts(input, sep string) []int64 {
 	lines := strings.Split(input, sep)
