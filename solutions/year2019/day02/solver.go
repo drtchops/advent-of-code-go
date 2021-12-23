@@ -3,7 +3,7 @@ package day02
 import (
 	"fmt"
 
-	"github.com/drtchops/aoc/solutions/year2019/intcode"
+	"github.com/drtchops/advent-of-code-go/solutions/year2019/intcode"
 )
 
 type Solver struct{}

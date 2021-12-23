@@ -1,3 +1,3 @@
-module github.com/drtchops/aoc
+module github.com/drtchops/advent-of-code-go
 
-go 1.15
+go 1.17

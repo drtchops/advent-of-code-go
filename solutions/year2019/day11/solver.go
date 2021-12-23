@@ -3,8 +3,8 @@ package day11
 import (
 	"fmt"
 
-	"github.com/drtchops/aoc/solutions/year2019/intcode"
-	"github.com/drtchops/aoc/utils"
+	"github.com/drtchops/advent-of-code-go/solutions/year2019/intcode"
+	"github.com/drtchops/advent-of-code-go/utils"
 )
 
 type Solver struct{}

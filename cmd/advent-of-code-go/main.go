@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/drtchops/aoc/solutions"
+	"github.com/drtchops/advent-of-code-go/solutions"
 )
 
-var USAGE = "Usage: aoc <year(2015-2020)> <day(1-25)> <part(a|b)>"
+var USAGE = "Usage: ./aoc <year(2015-2021)> <day(1-25)> <part(a|b)>"
 
 func main() {
 	args := os.Args[1:]
@@ -20,7 +20,7 @@ func main() {
 	}
 
 	year, err := strconv.Atoi(args[0])
-	if err != nil || year < 2015 || year > 2020 {
+	if err != nil || year < 2015 || year > 2021 {
 		fmt.Println(USAGE)
 		return
 	}

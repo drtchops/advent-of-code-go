@@ -3,7 +3,7 @@ package day01
 import (
 	"fmt"
 
-	"github.com/drtchops/aoc/utils"
+	"github.com/drtchops/advent-of-code-go/utils"
 )
 
 type Solver struct{}

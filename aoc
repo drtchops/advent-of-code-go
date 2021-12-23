@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+go run cmd/advent-of-code-go/main.go $@
